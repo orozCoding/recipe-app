@@ -64,6 +64,8 @@ class RecipeFoodsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def recipe_food_params
-    params.require(:recipe_food).permit(:quantity)
+    hash = params.require(:recipe_food).permit(:quantity, :food_id)
+    hash[:recipe] = Recipe.find(1)
+    hash
   end
 end

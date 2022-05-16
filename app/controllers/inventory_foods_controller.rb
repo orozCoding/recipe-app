@@ -19,6 +19,7 @@ class InventoryFoodsController < ApplicationController
 
   # POST /inventory_foods or /inventory_foods.json
   def create
+    @foods = Food.all
     @inventory_food = InventoryFood.new(inventory_food_params)
 
     respond_to do |format|
