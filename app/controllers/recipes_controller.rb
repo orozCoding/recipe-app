@@ -4,7 +4,7 @@ class RecipesController < ApplicationController
   # GET /recipes or /recipes.json (Public recipe list)
   def index
     # add where recipe is public
-    @recipes = Recipe.all
+    @recipes = Recipe.where(public: true)
   end
 
   # GET /recipes/1 or /recipes/1.json
