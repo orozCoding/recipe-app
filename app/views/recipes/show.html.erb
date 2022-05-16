@@ -1,10 +1,29 @@
 <p style="color: green"><%= notice %></p>
-
 <%= render @recipe %>
-
 <div>
   <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
   <%= link_to "Back to recipes", recipes_path %>
-
   <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+  <hr>
+  <%= button_to "Add ingridient", new_recipe_food_path, method: :get %>
+  <% if @recipe_foods.any? %>
+    <table>
+      <tr>
+        <th>Food</th>
+        <th>Quantity</th>
+        <th>Value</th>
+        <th>Actions</th>
+      </tr>
+      <% @recipe_foods.each do |rf| %>
+        <tr>
+          <td> <%= rf.food.name %> </td>
+          <td><%= rf.size %> </td>
+          <td><%= rf.value %>
+          <td> <%= button_to "Delete", rf, method: :delete %> </td>
+        </tr>
+      <% end %>
+    </table>
+  <% else %>
+    <p> Add ingridients to your recepy</p>
+  <%end%>
 </div>
