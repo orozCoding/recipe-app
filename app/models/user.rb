@@ -7,4 +7,9 @@ class User < ApplicationRecord
   has_many :foods, dependent: :destroy
   has_many :recipes, dependent: :destroy
   validates :name, length: { maximum: 250 }, presence: true
+
+  def is?(role)
+    self.role == role.to_s
+  end
+  
 end
