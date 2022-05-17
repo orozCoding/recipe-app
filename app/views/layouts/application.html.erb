@@ -10,7 +10,7 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
 
-  <body>
+  <body class="d-flex col">
   <div>
   <%  if user_signed_in? %>
   <p>Currently logged as <%= current_user.name %> </p>
