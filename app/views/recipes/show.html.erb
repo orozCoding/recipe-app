@@ -5,7 +5,7 @@
     <% if can? :manage, @recipe %>
   <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
     <%= button_to "Destroy this recipe", @recipe, method: :delete %>
-  <%= button_to "Add ingridient", new_recipe_food_path, method: :get %>
+  <%= button_to "Add ingridient", new_recipe_recipe_food_path(@recipe.id), method: :get %>
   <% end %>
   <hr>
   <% if @recipe_foods.any? %>
@@ -21,7 +21,7 @@
           <td> <%= rf.food.name %> </td>
           <td><%= rf.size %> </td>
           <td><%= rf.value %>
-          <td> <%= button_to "Delete", rf, method: :delete %> </td>
+          <td> <%= button_to "Delete", recipe_recipe_food_path(@recipe, rf), method: :delete %> </td>
         </tr>
       <% end %>
     </table>
