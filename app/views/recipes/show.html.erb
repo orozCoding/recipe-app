@@ -1,11 +1,17 @@
 <p style="color: green"><%= notice %></p>
-<%= render @recipe %>
+<% if @recipe.public? %>
+  <%= render @recipe %>
+<% elsif can? :manage, @recipe %>
+  <%= render @recipe %>
+<% else %>
+  <p> This recepy is private. </p>
+<% end %>
 <div>
   <%= link_to "Back to recipes", recipes_path %>
-    <% if can? :manage, @recipe %>
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
+  <% if can? :manage, @recipe %>
+    <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
     <%= button_to "Destroy this recipe", @recipe, method: :delete %>
-  <%= button_to "Add ingridient", new_recipe_recipe_food_path(@recipe.id), method: :get %>
+    <%= button_to "Add ingridient", new_recipe_recipe_food_path(@recipe.id), method: :get %>
   <% end %>
   <hr>
   <% if @recipe_foods.any? %>
@@ -21,11 +27,11 @@
           <td> <%= rf.food.name %> </td>
           <td><%= rf.size %> </td>
           <td><%= rf.value %>
-          <td> <%= button_to "Delete", recipe_recipe_food_path(@recipe, rf), method: :delete %> </td>
-        </tr>
-      <% end %>
-    </table>
-  <% else %>
-    <p> Add ingridients to your recepy</p>
-  <%end%>
-</div>
+            <td> <%= button_to "Delete", recipe_recipe_food_path(@recipe, rf), method: :delete %> </td>
+          </tr>
+        <% end %>
+      </table>
+    <% else %>
+      <p> Add ingridients to your recepy</p>
+    <%end%>
+  </div>
