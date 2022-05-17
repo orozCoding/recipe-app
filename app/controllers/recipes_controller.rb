@@ -5,7 +5,7 @@ class RecipesController < ApplicationController
   # GET /recipes or /recipes.json (Public recipe list)
   def index
     # Show public recipes
-    @recipes = Recipe.where(public: true)
+    @recipes = Recipe.where(public: true).order('created_at DESC')
   end
 
   # GET /recipes/1 or /recipes/1.json
