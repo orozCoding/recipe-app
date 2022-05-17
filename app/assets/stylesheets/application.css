@@ -28,6 +28,8 @@ a, button {
 }
 
 body {
+  width: 100%;
+  align-items: center;
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
