@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  # devise_scope :user do
+  #   get '/', to: 'devise/sessions#new'
+  # end
+  devise_for :users
   resources :inventories
   resources :inventory_foods
   resources :foods
