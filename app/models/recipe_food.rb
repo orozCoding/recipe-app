@@ -8,6 +8,6 @@ class RecipeFood < ApplicationRecord
   end
 
   def value
-    "$#{quantity * food.price}"
+    quantity * food.price
   end
 end

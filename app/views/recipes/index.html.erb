@@ -1,14 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Public Recipes</h1>
-
-<div id="recipes">
+<%= link_to "New recipe", new_recipe_path %>
+<div id="recipes-ctn d-flex col">
   <% @recipes.each do |recipe| %>
-    <%= render recipe %>
-    <p>
-      <%= link_to "Show this recipe", recipe %>
-    </p>
+    <%= render 'recipes/recipe-list', recipe: recipe %>
   <% end %>
 </div>
-
-<%= link_to "New recipe", new_recipe_path %>

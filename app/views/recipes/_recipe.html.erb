@@ -1,27 +1,26 @@
-<div id="<%= dom_id recipe %>">
-  <p>
-    <strong>Name:</strong>
-    <%= recipe.name %>
-  </p>
-
-  <p>
-    <strong>Preparation time:</strong>
-    <%= recipe.preparation_time %>
-  </p>
-
-  <p>
-    <strong>Cooking time:</strong>
-    <%= recipe.cooking_time %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= recipe.description %>
-  </p>
-
-  <p>
-    <strong>Public:</strong>
-    <%= recipe.public %>
-  </p>
-
+<div id="<%= dom_id recipe %>" class="recipe-ctn d-flex">
+  <div class="recipe-leftcol-ctn d-flex col">
+    <div>
+      <strong>Name:</strong>
+      <p><%= recipe.name %></p>
+    </div>
+    <div>
+      <strong>Preparation time:</strong>
+      <p><%= recipe.preparation_time.to_s + ' min' %></p>
+    </div>
+    <div>
+      <strong>Cooking time:</strong>
+      <p><%= recipe.cooking_time.to_s + ' min' %></p>
+    </div>
+    <%= button_to "Delete Recipe", recipe, method: :delete %>
+  </div>
+  <div class="recipe-rightcol-ctn d-flex col">
+    <div>
+      <strong>Description:</strong>
+      <p><%= recipe.description.truncate(300) %></p>
+    </div>
+    <p>
+      <%= link_to "Show this recipe", recipe %>
+    </p>
+  </div>
 </div>
