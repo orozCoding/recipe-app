@@ -22,10 +22,48 @@
   padding: 0;
 }
 
-a, button {
+a, button,
+a:hover {
   all: unset;
   cursor: pointer;
 }
+
+a,
+nav button { 
+  color: blue;
+}
+
+a:hover, nav button:hover {
+  color: rgb(83, 83, 251);
+}
+
+header, nav, ul { 
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  gap: 20px;
+}
+
+nav button,
+nav button:hover {
+  background-color: unset;
+  border: none;
+}
+
+nav button {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
 
 body {
   width: 100%;
@@ -64,6 +102,3 @@ button:hover,
   background-color: aliceblue;
 }
 
-a { 
-  color: blue;
-}
