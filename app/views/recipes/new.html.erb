@@ -5,5 +5,8 @@
 <br>
 
 <div>
-  <%= link_to "Back to recipes", recipes_path %>
+  <%= link_to "Public Recipes", recipes_path %><br>
+  <% if user_signed_in? %>
+    <%= link_to "My Recipes", "/users/#{current_user.id}/recipes" %>
+  <% end %>
 </div>

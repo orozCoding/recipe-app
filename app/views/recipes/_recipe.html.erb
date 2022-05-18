@@ -1,27 +1,27 @@
-<div id="<%= dom_id recipe %>">
-  <p>
-    <strong>Name:</strong>
-    <%= recipe.name %>
-  </p>
-
-  <p>
-    <strong>Preparation time:</strong>
-    <%= recipe.preparation_time %>
-  </p>
-
-  <p>
-    <strong>Cooking time:</strong>
-    <%= recipe.cooking_time %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= recipe.description %>
-  </p>
-
-  <p>
-    <strong>Public:</strong>
-    <%= recipe.public %>
-  </p>
-
-</div>
+  <div id=<%= "recipe-#{recipe.id}" %> class="recipe-ctn d-flex col">
+    <div class="recipe-title">
+      <h2><%= recipe.name %></h2>
+    </div>
+    <div class="recipe-first-line d-flex">
+      <div class="d-flex">
+        <strong>Preparation time: </strong>
+        <p><%= "#{recipe.preparation_time} min" %></p>
+      </div>
+      <div class="d-flex recipe-line">
+        <strong>Public: </strong>
+        <% if recipe.public? %>
+          <p class="recipe-public-text-true">YES</p>
+        <% else %>
+          <p class="recipe-public-text-false">NO</p>
+        <% end %>
+      </div>
+    </div>
+    <div class="d-flex recipe-line">
+      <strong>Cooking time: </strong>
+      <p><%= "#{recipe.cooking_time} min" %></p>
+    </div>
+    <div class="recipe-description-ctn">
+      <strong>Description: </strong><br>
+      <p><%= recipe.description %></p>
+    </div>
+  </div>

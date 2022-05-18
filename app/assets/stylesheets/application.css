@@ -13,3 +13,94 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Square+Peg&display=swap');
+
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a, button {
+  all: unset;
+  cursor: pointer;
+}
+
+a,
+nav button { 
+  color: blue;
+}
+
+a:hover, nav button:hover {
+  color: rgb(83, 83, 251);
+}
+
+header, nav, ul { 
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  gap: 20px;
+}
+
+nav button,
+nav button:hover {
+  background-color: unset;
+  border: none;
+}
+
+nav button {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+}
+
+section {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+button,
+.form-btn {
+  padding: 2px 6px;
+  border: solid 2px black;
+  background-color: white;
+}
+
+button:hover,
+.form-btn:hover {
+  background-color: aliceblue;
+}
+
+footer {
+  padding: 20px;
+}

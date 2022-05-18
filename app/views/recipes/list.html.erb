@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+<section id="my-recipes" class="my-recipes-ctn d-flex col">
+  <% if @recipes.any? %>
+    <h2><%= "Recipes by #{@user.name}"%></h2>
+    <% if user_signed_in? %>
+      <%= button_to "Create Recipe", new_recipe_path, method: :get %>
+    <% end %>
+    <% @recipes.each do |recipe| %>
+      <%= render 'recipes/my-recipe', recipe: recipe %>
+    <% end %>
+  <% else %>
+     <h2><%= "There are no recipes by #{@user.name}"%></h2>
+    <% if user_signed_in? %>
+      <%= button_to "Create Recipe", new_recipe_path, method: :get %>
+    <% end %>
+  <% end %>
+</section>

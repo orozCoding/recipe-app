@@ -1,0 +1,20 @@
+<% if @recipe_foods.any? %>
+  <table>
+    <tr>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Value</th>
+      <th>Actions</th>
+    </tr>
+    <% @recipe_foods.each do |rf| %>
+      <tr>
+        <td> <%= rf.food.name %> </td>
+        <td><%= rf.size %> </td>
+        <td><%= "$#{rf.value}" %> </td>
+        <td> <%= button_to "Delete", recipe_recipe_food_path(@recipe, rf), method: :delete %> </td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  <p> This recepy doesn't have any ingridient. </p>
+<%end%>
