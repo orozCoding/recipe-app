@@ -17,5 +17,17 @@
       <%= "Welcome #{current_user.name}!" %>
     <% end %>
     <%= yield %>
+    <footer class="d-flex">
+      <% if user_signed_in? %>
+        <p><%= "You're currently logged as #{current_user.name}!"%></p>
+      <% else %>
+        <p>
+          <%= link_to "Log In", new_user_session_path %>
+          or
+          <%= link_to "Register", new_user_registration_path %>
+          to create or edit your recipes!
+        </p>
+      <% end %>
+    </footer>
   </body>
 </html>

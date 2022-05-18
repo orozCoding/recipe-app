@@ -22,8 +22,7 @@
   padding: 0;
 }
 
-a, button,
-a:hover {
+a, button {
   all: unset;
   cursor: pointer;
 }
@@ -102,3 +101,6 @@ button:hover,
   background-color: aliceblue;
 }
 
+footer {
+  padding: 20px;
+}
