@@ -35,6 +35,15 @@ body {
   padding: 10px;
 }
 
+section {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
 .d-flex {
   display: flex;
 }

@@ -1,9 +1,12 @@
 <p style="color: green"><%= notice %></p>
-
+<section id="public-recipes">
 <h1>Public Recipes</h1>
-<%= link_to "New recipe", new_recipe_path %>
+<% if user_signed_in? %>
+  <%= button_to "Create Recipe", new_recipe_path, method: :get %>
+<% end %>
 <div class="index-recipes-ctn d-flex col">
   <% @recipes.each do |recipe| %>
     <%= render 'recipes/recipe-list', recipe: recipe %>
   <% end %>
 </div>
+</section>
