@@ -35,3 +35,47 @@
 
 /* Recipe show */
 
+#recipe {
+  width: 100%;
+  align-items: center;
+}
+
+.recipe-ctn {
+  width: 60%;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.recipe-title {
+  align-self: center;
+}
+
+.recipe-first-line {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.recipe-first-line div,
+.recipe-line {
+  gap: 5px;
+}
+
+.recipe-buttons-ctn {
+  width: 60%;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.recipe-table-ctn {
+  width: 60%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td,
+table th {
+  padding: 6px 0;
+}

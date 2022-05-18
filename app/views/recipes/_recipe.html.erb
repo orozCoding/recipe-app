@@ -1,13 +1,13 @@
-  <div id=<%= "recipe-#{recipe.id}" %> class="recipe-ctn d-flex">
+  <div id=<%= "recipe-#{recipe.id}" %> class="recipe-ctn d-flex col">
     <div class="recipe-title">
       <h2><%= recipe.name %></h2>
     </div>
-    <div class="recipe-line-ctn d-flex">
-      <div>
+    <div class="recipe-first-line d-flex">
+      <div class="d-flex">
         <strong>Preparation time: </strong>
-        <p><% "#{recipe.preparation_time} min" %></p>
+        <p><%= "#{recipe.preparation_time} min" %></p>
       </div>
-      <div>
+      <div class="d-flex recipe-line">
         <strong>Public: </strong>
         <% if recipe.public? %>
           <p>Icon true</p>
@@ -16,9 +16,9 @@
         <% end %>
       </div>
     </div>
-    <div>
+    <div class="d-flex recipe-line">
       <strong>Cooking time: </strong>
-      <p><% "#{recipe.cooking_time} min" %></p>
+      <p><%= "#{recipe.cooking_time} min" %></p>
     </div>
     <div>
       <strong>Description: </strong><br>
