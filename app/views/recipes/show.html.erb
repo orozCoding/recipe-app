@@ -7,18 +7,21 @@
   <% else %>
     <p> This recepy is private. </p>
   <% end %>
-    <% if can? :manage, @recipe %>
-      <div class="recipe-buttons-ctn d-flex">
-        <%= button_to "Generate shopping list", '#', method: :get %>
-        <%= button_to "Add ingridient", new_recipe_recipe_food_path(@recipe.id), method: :get %>
-        <%= button_to "Edit recipe", edit_recipe_path(@recipe), method: :get %>
-        <%= button_to "Delete recipe", @recipe, method: :delete %>
-      </div>
-    <% end %>
+  <% if can? :manage, @recipe %>
+    <div class="recipe-buttons-ctn d-flex">
+      <%= button_to "Generate shopping list", '#', method: :get %>
+      <%= button_to "Add ingridient", new_recipe_recipe_food_path(@recipe.id), method: :get %>
+      <%= button_to "Edit recipe", edit_recipe_path(@recipe), method: :get %>
+      <%= button_to "Delete recipe", @recipe, method: :delete %>
+    </div>
+  <% end %>
   <div class="recipe-table-ctn">
     <hr>
     <%= render '/recipes/recipe-food' %>
     <hr>
   </div>
-  <%= link_to "Back to recipes", recipes_path %>
+  <%= link_to "Public Recipes", recipes_path %>
+  <% if user_signed_in? %>
+    <%= link_to "My Recipes", "/users/#{current_user.id}/recipes" %>
+  <% end %>
 </section>

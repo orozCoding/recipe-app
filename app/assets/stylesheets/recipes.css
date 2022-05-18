@@ -119,10 +119,11 @@ table th {
 
 .recipe-form-time {
   justify-content: space-evenly;
+  gap: 5px;
 }
 
 .recipe-form-time div {
-  width: 40%;
+  width: 50%;
 }
 
 .recipe-form input {
@@ -135,4 +136,14 @@ table th {
 
 .recipe-form input[type=checkbox] {
   align-self: center;
+}
+
+.recipe-public-text-true {
+  color: green;
+  font-weight: bold;
+}
+
+.recipe-public-text-false {
+  color: red;
+  font-weight: bold;
 }

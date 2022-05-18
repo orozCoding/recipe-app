@@ -2,7 +2,7 @@
   <div class="my-recipe-leftcol-ctn d-flex col">
     <%= link_to "#{recipe.name}", recipe_path(recipe), method: :get %>
     <% if can? :manage, recipe %>
-        <%= button_to "Delete recipe", @recipe, method: :delete %>
+        <%= button_to "Delete recipe", recipe_path(recipe), method: :delete %>
     <% end %>
   </div>
   <div class="my-recipe-rightcol-ctn d-flex col">
