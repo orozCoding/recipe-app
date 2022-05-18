@@ -15,7 +15,8 @@ class RecipesController < ApplicationController
 
   # GET /users/1/recipes
   def list
-    @recipes = Recipe.where(user_id: params[:user_id])
+    @user = User.find(params[:user_id])
+    @recipes = Recipe.where(user_id: params[:user_id]).order('created_at DESC')
   end
 
   # GET /recipes/new

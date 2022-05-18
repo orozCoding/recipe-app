@@ -7,7 +7,13 @@
   gap: 40px;
 }
 
-.index-recipe-ctn {
+.my-recipes-ctn {
+  width: 80%;
+  gap: 15px;
+}
+
+.index-recipe-ctn,
+.my-recipe-ctn {
   width: 100%;
   gap: 30px;
   border: solid black 1px;
@@ -16,21 +22,33 @@
   align-items: center;
 }
 
-.index-recipe-leftcol-ctn {
-  align-items: flex-start;
+.index-recipe-leftcol-ctn,
+.my-recipe-leftcol-ctn {
+  align-items: center;
+  gap: 10px;
 }
 
 .index-recipe-leftcol-ctn div {
   gap: 5px;
 }
 
-.index-recipe-leftcol-ctn a {
+.index-recipe-leftcol-ctn a,
+.my-recipe-leftcol-ctn a {
   font-size: 25px;
   font-weight: bold;
 }
 
 .index-recipe-rightcol-ctn div {
   gap: 5px;
+}
+
+.my-recipe-rightcol-ctn {
+  text-align: left;
+  flex-grow: 2;
+}
+
+.my-recipe-leftcol-ctn {
+  flex-grow: 1;
 }
 
 /* Recipe show */
