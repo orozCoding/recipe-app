@@ -23,7 +23,7 @@ Coming soon
 - Ruby
 - Git and Github
 - Terminal
-- browser
+- Browser
 
 ### Setup
 
