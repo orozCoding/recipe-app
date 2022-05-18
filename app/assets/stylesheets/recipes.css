@@ -60,9 +60,13 @@
   gap: 5px;
 }
 
+.recipe-description-ctn {
+  text-align: left;
+}
+
 .recipe-buttons-ctn {
   width: 60%;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 15px;
 }
 

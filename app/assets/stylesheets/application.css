@@ -32,6 +32,7 @@ body {
   align-items: center;
   text-align: center;
   font-family: 'Poppins', sans-serif;
+  padding: 10px;
 }
 
 .d-flex {
