@@ -52,13 +52,15 @@ section {
   flex-direction: column;
 }
 
-button {
+button,
+.form-btn {
   padding: 2px 6px;
   border: solid 2px black;
   background-color: white;
 }
 
-button:hover {
+button:hover,
+.form-btn:hover {
   background-color: aliceblue;
 }
 
