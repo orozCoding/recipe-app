@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b2154e3-25b8-4c27-999e-299e692cb0ef" name="Changes" comment="food create, show, delete">
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/foods/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/foods/show.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +146,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652908956689</updated>
-      <workItem from="1652908961462" duration="8033000" />
+      <workItem from="1652908961462" duration="8877000" />
     </task>
     <task id="LOCAL-00001" summary="food create, show, delete">
       <created>1652918272467</created>

@@ -5,5 +5,7 @@
 <div>
   <%= button_to "Back to foods", foods_path %>
 
-  <%= button_to "Destroy this food", @food, method: :delete %>
+  <% if can? :manage, @food%>
+    <%= button_to "Destroy this food", @food, method: :delete %>
+  <% end %>
 </div>
