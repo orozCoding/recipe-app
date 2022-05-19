@@ -23,9 +23,9 @@ default: &default
 
 development:
   <<: *default
-  database: recipe
-  username: go-groups
-  password:
+  database: recipe_app_development
+  username: amigo
+  password: quieropass
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
