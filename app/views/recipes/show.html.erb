@@ -9,7 +9,7 @@
   <% end %>
   <% if can? :manage, @recipe %>
     <div class="recipe-buttons-ctn d-flex">
-      <%= button_to "Generate shopping list", '#', method: :get %>
+      <%= button_to "Generate shopping list", general_shopping_list_path, method: :get %>
       <%= button_to "Add ingridient", new_recipe_recipe_food_path(@recipe.id), method: :get %>
       <%= button_to "Edit recipe", edit_recipe_path(@recipe), method: :get %>
       <%= button_to "Delete recipe", @recipe, method: :delete %>
