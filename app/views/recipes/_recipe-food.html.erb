@@ -4,14 +4,18 @@
       <th>Food</th>
       <th>Quantity</th>
       <th>Value</th>
-      <th>Actions</th>
+      <% if can? :manage, @recipe %>
+        <th>Actions</th>
+      <% end %>
     </tr>
     <% @recipe_foods.each do |rf| %>
       <tr>
         <td> <%= rf.food.name %> </td>
         <td><%= rf.size %> </td>
         <td><%= "$#{rf.value}" %> </td>
-        <td> <%= button_to "Delete", recipe_recipe_food_path(@recipe, rf), method: :delete %> </td>
+        <% if can? :manage, @recipe %>
+          <td> <%= button_to "Delete", recipe_recipe_food_path(@recipe, rf), method: :delete %> </td>
+        <% end %>
       </tr>
     <% end %>
   </table>
