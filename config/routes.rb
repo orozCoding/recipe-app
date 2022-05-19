@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :recipe_foods
   end
   resources :users
+  get 'general_shopping_list/', to: 'users#list'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
