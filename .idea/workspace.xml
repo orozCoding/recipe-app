@@ -1,22 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b2154e3-25b8-4c27-999e-299e692cb0ef" name="Changes" comment="General shopping list added">
-      <change afterPath="$PROJECT_DIR$/spec/integration/food_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/integration/login_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/integration/navigation_bar_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/integration/recipe_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/integration/sign_up_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/model/food_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/model/recipe_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/model/user_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/requests/index_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/requests/login_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/requests/sign_up_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/list.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/list.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
+    <list default="true" id="0b2154e3-25b8-4c27-999e-299e692cb0ef" name="Changes" comment="model, request and integration test added">
+      <change beforePath="$PROJECT_DIR$/spec/model/recipe_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/model/recipe_spec.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -402,7 +388,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652908956689</updated>
       <workItem from="1652908961462" duration="8877000" />
-      <workItem from="1652966239438" duration="15879000" />
+      <workItem from="1652966239438" duration="16729000" />
     </task>
     <task id="LOCAL-00001" summary="food create, show, delete">
       <created>1652918272467</created>
@@ -418,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652979993612</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="model, request and integration test added">
+      <created>1653001049494</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653001049494</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,7 +431,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="food create, show, delete" />
     <MESSAGE value="General shopping list added" />
-    <option name="LAST_COMMIT_MESSAGE" value="General shopping list added" />
+    <MESSAGE value="model, request and integration test added" />
+    <option name="LAST_COMMIT_MESSAGE" value="model, request and integration test added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/recipe_app@Signup.rcov" NAME="Signup Coverage Results" MODIFIED="1652997722399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="recipe-app" />
