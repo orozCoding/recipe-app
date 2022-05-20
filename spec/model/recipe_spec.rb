@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Recipe, type: :model do
-  describe 'User model' do
+  describe 'recipe model' do
     subject { Recipe.create(name: 'apple jam', preparation_time: 5, cooking_time: 4, description: 'hello', user_id: 1) }
 
     it 'check if subject name is null' do
