@@ -1,0 +1,12 @@
+<h1>New recipe</h1>
+
+<%= render "form", recipe: @recipe %>
+
+<br>
+
+<div>
+  <%= link_to "Public Recipes", recipes_path %><br>
+  <% if user_signed_in? %>
+    <%= link_to "My Recipes", "/users/#{current_user.id}/recipes" %>
+  <% end %>
+</div>

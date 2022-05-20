@@ -1,0 +1,37 @@
+<%= form_with(model: recipe, class: 'recipe-form d-flex col') do |form| %>
+  <% if recipe.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+      <ul>
+        <% recipe.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="recipe-form-field">
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+  <div class="recipe-form-time d-flex">
+    <div class="recipe-form-field">
+      <%= form.label 'Preparation time (min)', style: "display: block" %>
+      <%= form.number_field :preparation_time %>
+    </div>
+    <div class="recipe-form-field">
+      <%= form.label 'Cooking time (min)', style: "display: block" %>
+      <%= form.number_field :cooking_time %>
+    </div>
+  </div>
+  <div class="recipe-form-field">
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description, size: '8x8' %>
+  </div>
+  <div class="recipe-form-field">
+    <%= form.label 'Do you want this recipe to be public?', style: "display: block" %>
+    <%= form.check_box :public %>
+  </div>
+  <div>
+    <%= form.submit nil, :class => 'form-btn' %>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+<div>
+  <h1 class="heading">Shopping List</h1>
+
+  <div class="shopping_list_stats">
+    <h5>Amount of food items to buy: <%= @foods.count(:name) %></h5>
+      <h5>Total of food needed: $<%= @total_price %></h5>
+  </div>
+
+  <div class="listDiv">
+    <table class="table table-striped table-bordered">
+      <thead>
+      <tr>
+        <th class="mb-3 col-sm-3">Food</th>
+        <th class="mb-3 col-sm-5">Quantity</th>
+        <th class="mb-3 col-sm-3">Price</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @foods.each do |food|%>
+        <tr>
+          <% quantity=RecipeFood.joins(:food).where(food_id: food.id).sum( 'quantity') %>
+          <td><%= food.name%></td>
+          <td><%= quantity %> <%= food.measurement_unit %></td>
+          <td>$ <%= food.price * quantity %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div id="<%= "index-recipe-#{recipe.id}" %>" class="index-recipe-ctn d-flex">
+  <div class="index-recipe-leftcol-ctn d-flex col">
+      <%= link_to "#{recipe.name}", recipe_path(recipe), method: :get %>
+    <div class="d-flex">
+      <strong>By:</strong>
+      <p><%= recipe.user.name %></p>
+    </div>
+  </div>
+  <div class="index-recipe-rightcol-ctn d-flex col">
+    <div class="d-flex">
+      <strong>Total food items:</strong>
+      <p><%= recipe.total_food_items %></p>
+    </div>
+    <div class="d-flex">
+      <strong>Total price:</strong>
+      <p><%= "$#{recipe.total_price}" %></p>
+    </div>
+  </div>
+</div>
